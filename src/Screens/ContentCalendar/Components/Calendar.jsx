@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Inputfield from "../../../Components/InputField";
+import Inputfield from "../../../Components/Inputfield";
 import { carddata } from "../../../Utils/DummyData";
 import moment from "moment";
 import CardCalendar from "./CardCalendar";
-import { IMAGES } from "../../../Utils/Images";
+import { IMAGES } from "../../../Utils/images";
 
 const Calendar = () => {
   const today = moment();
@@ -47,7 +47,7 @@ const Calendar = () => {
         <p className="text12 ">{userDate}</p>
         <div className="relative flex items-center">
           <input
-          id="datepicker"
+            id="datepicker"
             type="date"
             value={userDate}
             onChange={handleDateChange}

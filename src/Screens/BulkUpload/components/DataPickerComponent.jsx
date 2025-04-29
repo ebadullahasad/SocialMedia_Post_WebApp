@@ -1,14 +1,14 @@
 import React from "react";
-import Inputfield from "../../../Components/InputField";
+import Inputfield from "../../../Components/Inputfield";
 import Button from "../../../Components/Button";
 
 const DataPickerComponent = () => {
   return (
     <div className="pt-6 flex sm:flex-row flex-col sm:items-center md:gap-4 gap-2">
       <div
-      onClick={() => {
-        document.getElementById("datepicker").showPicker();
-      }}
+        onClick={() => {
+          document.getElementById("datepicker").showPicker();
+        }}
         className="w-full md:w-[90%] flex items-center justify-between pr-2 bg-whiteColor 
    shadow-lg rounded-md cursor-pointer"
       >

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Inputfield from "../../../Components/InputField";
+import Inputfield from "../../../Components/Inputfield";
 import Button from "../../../Components/Button";
-import { IMAGES } from "../../../utils/Images";
+import { IMAGES } from "../../../utils/images";
 import UploadImage from "../../../Components/UploadImage";
 import { platforma } from "../../../Utils/DummyData";
 import { useSelector } from "react-redux";
@@ -111,20 +111,19 @@ const ImageUploadForm = () => {
               onPress={() => handleEdit(index)}
             />
             <span className="text-gray md:text-4xl">|</span>
-            {
-              theme === "dark" ?
-                <Button
-                  image={IMAGES.DELETEICONDARK}
-                  imageStyle={`md:w-8 w-5 `}
-                  onPress={() => handleDelete(index)}
-                />
-                :
-                <Button
-                  image={IMAGES.DELETEICON}
-                  imageStyle={`md:w-8 w-5 `}
-                  onPress={() => handleDelete(index)}
-                />
-            }
+            {theme === "dark" ? (
+              <Button
+                image={IMAGES.DELETEICONDARK}
+                imageStyle={`md:w-8 w-5 `}
+                onPress={() => handleDelete(index)}
+              />
+            ) : (
+              <Button
+                image={IMAGES.DELETEICON}
+                imageStyle={`md:w-8 w-5 `}
+                onPress={() => handleDelete(index)}
+              />
+            )}
           </div>
         </div>
       ))}

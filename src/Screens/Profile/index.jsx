@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "../../Components/Container";
-import { IMAGES } from "../../Utils/Images";
-import Inputfield from "../../Components/InputField";
+import { IMAGES } from "../../Utils/images";
+import Inputfield from "../../Components/Inputfield";
 import ToggleButton from "./Components/ToggleButton";
 import PasswordInput from "../../Components/PasswordInput";
 
@@ -61,7 +61,11 @@ const Profile = () => {
             />
             <div className="file-upload-button">
               <div className="absolute bottom-0 md:right-6  right-8 bg-blueColor md:p-2 p-1 rounded-full cursor-pointer shadow-md">
-                <img src={IMAGES.CAMRAICON} alt="Camera Icon" className="md:w-4 w-3" />
+                <img
+                  src={IMAGES.CAMRAICON}
+                  alt="Camera Icon"
+                  className="md:w-4 w-3"
+                />
               </div>
             </div>
           </label>

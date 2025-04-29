@@ -17,7 +17,7 @@
 //               My Integrations
 //             </h1>
 //             <div
-//               className="grid sm:grid-cols-4 grid-cols-2 gap-4 md:justify-start 
+//               className="grid sm:grid-cols-4 grid-cols-2 gap-4 md:justify-start
 //             justify-center items-start py-4"
 //             >
 //               {MyIntegrations.map((integration, index) => (
@@ -46,7 +46,7 @@
 //             <h1 className="text8 font-semibold text-primaryColor dark:text-whiteColor">
 //               +Add Intergration
 //             </h1>
-//             <div className="grid sm:grid-cols-4 grid-cols-2 gap-4 md:justify-start 
+//             <div className="grid sm:grid-cols-4 grid-cols-2 gap-4 md:justify-start
 //             justify-center items-start py-4">
 //               {AddIntegrations.map((addintegration, index) => (
 //                 <div className="flex items-start justify-start sm:p-6 sm:pl-8 pl-6 p-4 rounded-md cursor-pointer">
@@ -70,7 +70,7 @@
 //                 <img
 //                   src={theme === "dark" ? IMAGES.PLUSGRAY : IMAGES.PLUS}
 //                   alt={IMAGES.PLUS}
-//                   className="md:w-[80px] sm:w-[50px] w-[50px] object-contain 
+//                   className="md:w-[80px] sm:w-[50px] w-[50px] object-contain
 //                   hover:shadow-custom border-[1px] dark:border-gray border-primaryColor border-dashed md:p-6 p-4 rounded-md"
 //                 />
 //               </div>
@@ -84,12 +84,9 @@
 
 // export default Integrations;
 
-
-
-
 import React from "react";
 import Container from "../../Components/Container";
-import { IMAGES } from "../../utils/Images";
+import { IMAGES } from "../../Utils/images";
 import { AddIntegrations, MyIntegrations } from "../../Utils/DummyData";
 import { useSelector } from "react-redux";
 
@@ -135,8 +132,10 @@ const Integrations = () => {
             <h1 className="text8 font-semibold text-primaryColor dark:text-whiteColor">
               +Add Intergration
             </h1>
-            <div className="grid sm:grid-cols-4 grid-cols-2 gap-4 md:justify-start 
-            justify-center items-start py-4">
+            <div
+              className="grid sm:grid-cols-4 grid-cols-2 gap-4 md:justify-start 
+            justify-center items-start py-4"
+            >
               {AddIntegrations.map((addintegration, index) => (
                 <div className="flex items-start justify-start ">
                   <div

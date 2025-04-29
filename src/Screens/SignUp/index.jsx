@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Inputfield from "../../Components/InputField";
+import Inputfield from "../../Components/Inputfield";
 import { Link } from "react-router-dom";
 import Button from "../../Components/Button";
 import { useSelector } from "react-redux";

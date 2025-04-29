@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import SideNav from "./SideNav";
 import { IMAGES } from "../Utils/images";
-import InputField from "./InputField";
+import InputField from "./Inputfield";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -22,20 +22,18 @@ const Container = ({ children, search }) => {
   }, [theme]);
 
   const handleClose = () => {
-    menu && (
-      setMenu(false)
-    )
+    menu && setMenu(false);
 
-    open && (
-      setOpen(false)
-    )
-  }
+    open && setOpen(false);
+  };
 
   return (
     <div
       className="flex h-screen overflow-hidden bg-background dark:bg-backgroundDark 
     bg-no-repeat bg-cover w-full"
-    onClick={() => { handleClose() }}
+      onClick={() => {
+        handleClose();
+      }}
     >
       {/* Left Sidebar (Fixed) */}
       <SideNav menu={menu} setMenu={setMenu} />
@@ -45,9 +43,12 @@ const Container = ({ children, search }) => {
         {/* Navbar (Fixed) */}
         <header className="w-full p-4 flex justify-between items-center z-50">
           <div
-            className={`flex items-center ${search ? "justify-between" : "md:justify-end justify-between "
-              } md:w-[92%] w-[100%] mx-auto relative`}
-            onClick={() => { handleClose() }}
+            className={`flex items-center ${
+              search ? "justify-between" : "md:justify-end justify-between "
+            } md:w-[92%] w-[100%] mx-auto relative`}
+            onClick={() => {
+              handleClose();
+            }}
           >
             <div className="md:hidden block">
               <img
@@ -94,15 +95,17 @@ const Container = ({ children, search }) => {
                 User Workplace
               </span>
               <MdOutlineKeyboardArrowDown
-                className={`lg:w-6 md:w-6 ${open ? "rotate-180" : ""
-                  } w-5 lg:h-7 md:h-6 h-5 object-contain text-whiteColor xl:block hidden`}
+                className={`lg:w-6 md:w-6 ${
+                  open ? "rotate-180" : ""
+                } w-5 lg:h-7 md:h-6 h-5 object-contain text-whiteColor xl:block hidden`}
               />
             </div>
 
             {/* Drop Down  */}
             <div
-              className={`bg-whiteColor ${open ? "flex flex-col" : "hidden"
-                } transition-all duration-100 shadow-custom rounded-md md:p-4 p-2 flex flex-col gap-2 
+              className={`bg-whiteColor ${
+                open ? "flex flex-col" : "hidden"
+              } transition-all duration-100 shadow-custom rounded-md md:p-4 p-2 flex flex-col gap-2 
               absolute z-50 md:-bottom-28 -bottom-20 right-0 text14`}
             >
               <p
@@ -130,7 +133,9 @@ const Container = ({ children, search }) => {
           className="overflow-auto custom-scrollbar  xl:px-0 md:pt-0 md:px-2 p-4 bg-BackgroundColor 
           md:w-[90%] w-full mx-auto pb-6 h-[90%]  
         "
-          onClick={() => { handleClose() }}
+          onClick={() => {
+            handleClose();
+          }}
         >
           {children}
         </div>

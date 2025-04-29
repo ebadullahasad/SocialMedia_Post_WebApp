@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Inputfield from "../../Components/InputField";
+import Inputfield from "../../Components/Inputfield";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button";
 import { useSelector } from "react-redux";
@@ -69,7 +69,9 @@ const Login = () => {
               <Button
                 btnname="Login"
                 btnStyle="px-20 md:py-3 py-2 text13 rounded-full dark:bg-cgreen  bg-primaryColor text-whiteColor"
-                onPress={()=>{navigate("/dashboard")}}
+                onPress={() => {
+                  navigate("/dashboard");
+                }}
               />
             </div>
 
