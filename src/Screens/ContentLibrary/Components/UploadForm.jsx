@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Inputfield from "../../../Components/Inputfield";
 import Button from "../../../Components/Button";
-import { IMAGES } from "../../../utils/images";
+import { IMAGES } from "../../../Utils/images";
 import UploadImage from "../../../Components/UploadImage";
 import { platforma } from "../../../Utils/DummyData";
 import { useSelector } from "react-redux";
